@@ -43,20 +43,10 @@ print ("Roll total: " + tot)
 def checkstring(input):
     input = input.lower()
     if input == "yes" or input == "y":
-<<<<<<< HEAD
-        print("chocolate")
-        return 1
-    elif input == "no" or input =="n":
-        print("labs")
-        return 0
-    else:
-        print("are cute")
-=======
         return 1
     elif input == "no" or input =="n":
         return 0
     else:
->>>>>>> multipledie
         return 2
         
 reroll = input("Would you like to roll again? Yes or No?")
