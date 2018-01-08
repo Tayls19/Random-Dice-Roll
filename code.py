@@ -5,20 +5,25 @@ from random import randint
 
 dice = input("How many dice would you like to roll?")
     
-while dice.isdigit() == False:
-  print("Please type an integer")
+while dice.isdigit() == False or int(dice) == 0:
+  print("Please type a positive integer")
   dice = input("How many dice would you like to roll?")
 if dice == 1:
-  total_dice = ("1 die") 
+  total_dice = ("1 die")
+
 else:
   total_dice = (dice + " dice")
 
 faces = input("How many faces on each die?")
-while dice.isdigit() == False:
-  print("Please type an integer")
+while faces.isdigit() == False or int(faces) == 0:
+  print("Please type a positive integer")
   faces = input("How many faces on each die?")
-print(total_dice)
-print (faces + " faces")
+if faces == 0:
+    print("Please type a positive integer")
+    dice = input("How many dice would you like to roll?")
+else:
+    print(total_dice)
+    print (faces + " faces")
 
 faces = int(faces)
 dice = int(dice)
