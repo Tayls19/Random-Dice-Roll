@@ -40,20 +40,35 @@ roll = str(roll)
 print ("Your roll: " + roll)
 print ("Roll total: " + tot)
 
+def checkstring(input):
+    input = input.lower()
+    if input == "yes" or input == "y":
+        print("chocolate")
+        return 1
+    elif input == "no" or input =="n":
+        print("labs")
+        return 0
+    else:
+        print("are cute")
+        return 2
+        
 reroll = input("Would you like to roll again? Yes or No?")
-while reroll == "Yes" or reroll == "yes" or reroll == "y":
-  roll = []
-  x = 1
-  while x <= dice:
-    roll = roll + [randint(1, faces)]
-    x += 1
-  tot = str(sum(roll))
-  roll = str(roll)
-  print ("This is your NEW roll: " + roll)
-  reroll = input ("Would you like to roll again? Yes, or No?")
-if reroll == "No" or reroll == "no" or reroll == "n":
-  print("Goodbye!")
-while reroll != "Yes" or reroll != "yes" or reroll != "No" or reroll != "no":
-  print("Please type \"Yes\" or \"No\"")
-  reroll = input ("Would you like to roll again? Yes, or No?")
-  
+
+while True:
+    checkResult = checkstring(reroll)
+    if checkResult == 0:
+        break
+    if checkResult == 1:
+        roll = []
+        x = 1
+        while x <= dice:
+            roll = roll + [randint(1, faces)]
+            x += 1
+        tot = str(sum(roll))
+        roll = str(roll)
+        print ("This is your NEW roll: " + roll)
+        reroll = input ("Would you like to roll again? Yes, or No?")
+    if checkResult == 2:
+        print("Please type \"Yes\" or \"No\"")
+        reroll = input ("Would you like to roll again? Yes, or No?")
+print("Goodbye!")  
