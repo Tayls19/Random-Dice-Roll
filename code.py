@@ -52,6 +52,10 @@ def checkstring(input):
     else:
         print("are cute")
 =======
+        return 1
+    elif input == "no" or input =="n":
+        return 0
+    else:
 >>>>>>> multipledie
         return 2
         
