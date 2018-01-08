@@ -44,4 +44,4 @@ while reroll == "Yes" or reroll == "yes":
 if reroll == "No" or reroll == "no":
   print("Goodbye!")
 else:
-  print("test")
+  print("Please type \"Yes\" or \"No\"")
