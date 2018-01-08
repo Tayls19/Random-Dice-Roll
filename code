@@ -3,6 +3,8 @@ outputs a random number between 1 and number of faces,
 and asks if user would like to reroll"""
 from random import randint
 
+faces = input("How many faces on each die?")
+
 print (faces + " faces")
 faces = int(faces)
 
