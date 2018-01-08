@@ -10,7 +10,6 @@ while dice.isdigit() == False or int(dice) == 0:
   dice = input("How many dice would you like to roll?")
 if dice == 1:
   total_dice = ("1 die")
-
 else:
   total_dice = (dice + " dice")
 
@@ -64,6 +63,7 @@ while True:
         tot = str(sum(roll))
         roll = str(roll)
         print ("This is your NEW roll: " + roll)
+        print ("This is your NEW roll total: " + tot)
         reroll = input ("Would you like to roll again? Yes, or No?")
     if checkResult == 2:
         print("Please type \"Yes\" or \"No\"")
