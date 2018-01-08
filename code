@@ -1,0 +1,10 @@
+""" DICE ROLLING SIMULATOR: asks number of faces on die,
+outputs a random number between 1 and number of faces,
+and asks if user would like to reroll"""
+from random import randint
+
+print (faces + " faces")
+faces = int(faces)
+
+print ("This is your random number")
+print (randint(1, faces))
