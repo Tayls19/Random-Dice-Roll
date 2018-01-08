@@ -24,5 +24,8 @@ while x <= dice:
   roll = roll + [randint(1, faces)]
   x += 1
 
-print ("Your roll")
-print (roll)
+tot = str(sum(roll))
+roll = str(roll)
+
+print ("Your roll: " + roll)
+print ("Roll total: " + tot)
