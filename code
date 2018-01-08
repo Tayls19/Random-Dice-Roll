@@ -11,12 +11,15 @@ if dice.isdigit() == True:
       total_dice = (dice + " dice")
 else:
   print("Please type an integer")
-
+  dice = input("How many dice would you like to roll?")
 
 faces = input("How many faces on each die?")
-
-print(total_dice) 
-print (faces + " faces")
+if dice.isdigit() == False:
+  print("Please type an integer")
+  faces = input("How many faces on each die?")
+else:
+  print(total_dice)
+  print (faces + " faces")
 
 faces = int(faces)
 dice = int(dice)
