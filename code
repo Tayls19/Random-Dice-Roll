@@ -3,10 +3,26 @@ outputs a random number between 1 and number of faces,
 and asks if user would like to reroll"""
 from random import randint
 
+dice = input("How many dice would you like to roll?")
+if dice = 1:
+  total_dice = ("1 die") 
+else:
+  total_dice = (dice + " dice")
+
+
 faces = input("How many faces on each die?")
 
+print(total_dice) 
 print (faces + " faces")
-faces = int(faces)
 
-print ("This is your random number")
-print (randint(1, faces))
+faces = int(faces)
+dice = int(dice)
+
+roll = []
+x = 1
+while x <= dice:
+  roll = roll + [randint(1, faces)]
+  x += 1
+
+print ("Your roll")
+print (roll)
