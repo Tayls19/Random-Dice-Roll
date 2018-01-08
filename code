@@ -4,10 +4,13 @@ and asks if user would like to reroll"""
 from random import randint
 
 dice = input("How many dice would you like to roll?")
-if dice == 1:
-  total_dice = ("1 die") 
+if dice.isdigit() == True:
+    if dice == 1:
+      total_dice = ("1 die") 
+    else:
+      total_dice = (dice + " dice")
 else:
-  total_dice = (dice + " dice")
+  print("Please type an integer")
 
 
 faces = input("How many faces on each die?")
